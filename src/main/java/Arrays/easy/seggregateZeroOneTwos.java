@@ -1,0 +1,42 @@
+package Arrays.easy;
+//Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
+public class seggregateZeroOneTwos {
+    public static void main(String[] args) {
+
+
+        int[] arr = {1, 0, 2, 0, 2, 1, 0, 2, 1};
+        int n = arr.length;
+        int i=0;
+        int l=0;
+        int r=n-1;
+        while (i <=r) {
+            if(arr[i]==0){
+                //if 0 swap arr[i] and arr[l] & increment i and l
+                int temp=arr[l];
+                arr[l]=arr[i];
+                arr[i]=temp;
+                i++;
+                l++;
+            } else if (arr[i]==1) {
+                //if 1 do nothing just increment i
+                i++;
+
+
+            }
+            else{
+                //if 2 just swap arr[i] and arr[r] && decrement r
+                int temp=arr[r];
+                arr[r]=arr[i];
+                arr[i]=temp;
+                r--;
+            }
+
+        }
+
+        for (int x:arr
+             ) {
+            System.out.println(x + " ");
+
+        }
+    }
+}
