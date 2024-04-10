@@ -2,7 +2,7 @@ package Arrays.medium;
 //Given a sorted array arr[] of size N. Find the element that appears only once in the array. All other elements appear exactly twice.
 public class OneElement {
     public static void main(String[] args) {
-        int[] arr={1, 1, 2, 2, 3, 3, 4, 50, 50, 65, 65};
+        int[] arr={1, 2, 2, 3, 3};
         int n=arr.length;
 
         int i=0;
@@ -12,7 +12,10 @@ public class OneElement {
             //if every element is occurring twice so in array till the point where single element has not occurred, till that time , first element of pair will come
             //at even index and second element will come at odd index
             //if that single element has occurred ,than after that point first element will be at odd point and second at even
-
+            if(mid==n-1 || mid==0){
+                System.out.println(arr[mid]);   //Index out of bound
+                break;
+            }
 
             //if mid is at odd index
             if(mid%2!=0){
