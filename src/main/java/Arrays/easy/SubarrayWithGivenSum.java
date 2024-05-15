@@ -36,6 +36,8 @@ public class SubarrayWithGivenSum {
         }
 
         System.out.println(f + " " + l);
+        int s=l-f+1;
+        System.out.println("Subarray of size with sum " + k + ": " + s );
 
 
     }

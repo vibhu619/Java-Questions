@@ -1,5 +1,5 @@
 package Arrays.medium;
-
+//BINARY SEARCH APPROACH
 public class FirstAndLastOccurence {
     public static void main(String[] args) {
         int[] arr={5, 7, 7 ,7 ,8, 8, 8};

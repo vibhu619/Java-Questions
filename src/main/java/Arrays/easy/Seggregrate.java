@@ -7,18 +7,20 @@ public class Seggregrate {
         int n=arr.length;
         int[] a=new int[n];
         int j=0;
-        for(int i=0;i<n;i++){
-            if(arr[i]>=0){
-                a[j]=arr[i];
-                j++;
-            }
-        }
+
         for(int i=0;i<n;i++){
             if(arr[i]<0){
                 a[j]=arr[i];
                 j++;
             }
         }
+        for(int i=0;i<n;i++){
+            if(arr[i]>=0){
+                a[j]=arr[i];
+                j++;
+            }
+        }
+
 
         arr=a;
         for (int x: arr

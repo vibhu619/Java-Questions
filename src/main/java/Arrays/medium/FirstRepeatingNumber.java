@@ -15,22 +15,27 @@ import static java.lang.Integer.MAX_VALUE;
 
 public class FirstRepeatingNumber {
     public static void main(String[] args) {
-        int[] arr={7 ,4 ,0 ,9 ,4 ,8 ,8 ,2 ,4 ,5 ,5 ,1};
+        int[] arr={7 ,4 ,0 ,9 ,8 ,0 ,8 ,2 ,4 ,5 ,5 ,1};
         int n=arr.length;
         Map<Integer,Integer> m=new HashMap<>();
 
-        int potentialAns=MAX_VALUE;
+        int potentialAns=-1;
         for(int i=0;i<n;i++){
             if(m.containsKey(arr[i])){
-                if(potentialAns>m.get(arr[i])) {
-                    potentialAns = m.get(arr[i]);
-                }
+                    potentialAns = arr[i];
+                    break;
+
             }
             else{
                 m.put(arr[i],i);
             }
         }
-        System.out.println(potentialAns);
+        if(potentialAns==-1){
+            System.out.println("No repeating number");
+        }
+        else {
+            System.out.println(potentialAns);
+        }
 
     }
 }

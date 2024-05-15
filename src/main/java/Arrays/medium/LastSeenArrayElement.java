@@ -20,7 +20,6 @@ public class LastSeenArrayElement {
         int[] arr={1 ,7, 3, 10, 4, 7, 7, 3, 5, 10, 1 ,10, 6 ,3 ,4};
         int n=arr.length;
         Map<Integer,Integer> m=new LinkedHashMap<>();
-        int index=n;
         for(int i=0;i<n;i++){
             if(m.containsKey(arr[i])){
                 m.put(arr[i],i);

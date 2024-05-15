@@ -1,6 +1,8 @@
 package Arrays.easy;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
 //Given an array A of positive integers. Your task is to find the leaders in the array. \
 // An element of array is leader if it is greater than or equal to all the elements to its right side. The rightmost element is always a leader.
 //
@@ -25,9 +27,25 @@ public class LeadersInArray {
                 list.add(arr[i]);
             }
         }
+        //Collections.reverse(list);
+        //OR reverse the list using recursion
+        reverse(list);
         for(int x:list){
             System.out.println(x);
         }
 
+    }
+
+    private static void reverse(ArrayList<Integer> list) {
+        if(list.isEmpty() || list==null){
+            return;
+        }
+
+        int value=list.remove(0);
+
+        //call reverse recursively
+        reverse(list);
+
+        list.add(value);
     }
 }

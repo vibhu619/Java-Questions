@@ -15,7 +15,7 @@ public class SubarrayWithSum0 {
         int lastKey=0;
         boolean bo=false;
         for(int i=0;i<n;i++){
-            int newKey=lastKey+arr[i];
+            int newKey=lastKey+arr[i];  //making newKey = a[i] + lastKey to avoid making the cummulative array, directly storing cummulative key in map
             if(m.containsKey(newKey)){
                 m.put(newKey,m.get(newKey)+1);
                 bo=true;

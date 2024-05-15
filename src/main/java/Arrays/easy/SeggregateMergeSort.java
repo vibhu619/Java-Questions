@@ -1,5 +1,6 @@
 package Arrays.easy;
 //First negative number than positive number( without changing the order)  --using merge sort
+//Maintaining order hence cant use 2 pointer
 public class SeggregateMergeSort {
     public static void main(String[] args) {
         int[] arr={ 5, 5,  -3, 4, -8, 0, -7, 3, -9, -3, 9, -2, 1};
@@ -26,7 +27,7 @@ public class SeggregateMergeSort {
 
     public static void merge(int arr[],int s ,int mid, int e){
         int n1=mid-s+1;  //size of left subarray in arr
-        int n2=e-mid;  //size of right subarray in arr
+        int n2=e-mid;  //size of right subarray in arr/ not including mid
 
         //two temp array to store left and right subarray elements
         int[] L=new int[n1];
@@ -37,7 +38,7 @@ public class SeggregateMergeSort {
             L[i]=arr[s+i];
         }
         for(int i=0;i<n2;i++){
-            R[i]=arr[mid+1+i];
+            R[i]=arr[mid+1+i]; //starting right sub array from mid+1
         }
 
         int i=0;

@@ -1,4 +1,4 @@
-package Arrays.PracticeArray;
+package String.Practice;
 
 import java.util.HashMap;
 import java.util.Map;
