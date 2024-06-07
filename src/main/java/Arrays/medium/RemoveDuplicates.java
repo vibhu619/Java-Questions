@@ -6,7 +6,7 @@ import java.util.ArrayList;
 // If no such element is found, return list containing [-1].
 public class RemoveDuplicates {
     public static void main(String[] args) {
-        int[] arr={2,3,1,2,3};
+        int[] arr={2 ,0 ,3 ,3 ,1};
         int n=arr.length;
         ArrayList<Integer> duplicates=new ArrayList<>();
 

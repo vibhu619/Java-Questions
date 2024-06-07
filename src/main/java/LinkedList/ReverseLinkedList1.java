@@ -1,6 +1,6 @@
 package LinkedList;
 //iterative approach
-public class ReverseLinkedList1 {
+    public class ReverseLinkedList1 {
 
     public Node reverseList(Node head){
         //Corner case, when list empty or only 1 node return head

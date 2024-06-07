@@ -11,7 +11,7 @@ public class SubarrayWithSum0 {
         int[] arr={4 ,2 ,0 ,1 ,6};
         int n=arr.length;
         Map<Integer,Integer> m=new LinkedHashMap<>();
-        m.put(0,1);
+        m.put(0,1);  //to handle array with sum 0 starting from 0th index
         int lastKey=0;
         boolean bo=false;
         for(int i=0;i<n;i++){

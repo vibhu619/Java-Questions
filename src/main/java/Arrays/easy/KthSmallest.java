@@ -30,11 +30,11 @@ public class KthSmallest {
         }
     }
 
-    private static int partition(int[] arr, int n, int low, int high) {
+    private static int partition( int[] arr,int n, int low, int high) {
         int pivotIdx=high; //initially pivot is at high
         int i=low-1; //and i at low -1
 
-        //iterate j and only increment i and swap arr[i] and arr[j] if arr[i]<pivot element
+        //iterate j and only increment i and swap arr[i] and arr[j] if arr[j]<pivot element
         for(int j=low;j<high;j++){
             if(arr[j]<arr[pivotIdx]){
                 i++;

@@ -17,19 +17,15 @@ public class paranthesisChecker {
         int n=x.length();
         Stack<Character> stack=new Stack<>();
         for(int i=0;i<n;i++){
-            if(x.charAt(i)=='{' || x.charAt(i)=='(' || x.charAt(i)=='[' ){
-                if(x.charAt(i)=='{'){
-                    stack.push('}');
-                }
-                else if(x.charAt(i)=='('){
-                    stack.push(')');
-
-                }
-                else{
-                    stack.push(']');
-                }
+            if(x.charAt(i)=='{'){
+                stack.push('}');
             }
-
+            else if(x.charAt(i)=='('){
+                stack.push(')');
+            }
+            else if((x.charAt(i)=='[')){
+                stack.push(']');
+            }
             else{
                 if(!stack.empty() && x.charAt(i)==stack.peek()){
                     stack.pop();
@@ -41,6 +37,5 @@ public class paranthesisChecker {
 
         }
         return stack.empty();
-
     }
 }

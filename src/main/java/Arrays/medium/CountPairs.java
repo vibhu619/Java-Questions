@@ -11,13 +11,13 @@ Output: 6*/
 
 public class CountPairs {
     public static void main(String[] args) {
-        int[] arr={1,1,1,1};
+        int[] arr={1 ,5 ,5 ,5 ,5 ,7};
         int n=arr.length;
-        int k=2;
+        int k=10;
         HashMap<Integer,Integer> m=new HashMap<>();
         int count=0;
         for(int i=0;i<n;i++){
-            if(m.containsKey(k-arr[i])){
+            if(m.containsKey(k-arr[i])){        ////////////TRICK - USE HASHMAP, BUT KEEP COUNTING PAIRS AS U BUILD HASHMAP//////
                 count=count+m.get(k-arr[i]);
             }
 

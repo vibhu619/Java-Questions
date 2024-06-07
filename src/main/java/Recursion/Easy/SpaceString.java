@@ -13,10 +13,8 @@ public class SpaceString {
             System.out.println(newString);
             return;
         }
-        {
             char curr=str.charAt(index);
             space(str,index+1,newString+curr);
             space(str,index+1,newString+" "+curr);
-        }
     }
 }
