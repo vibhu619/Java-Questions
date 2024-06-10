@@ -9,7 +9,6 @@ public class LongestSubstringWithUniqueChar {
         int n=str.length();
        int ans=-1;
        int i=0;
-       int j=0;
         Map<Character,Integer>  map=new HashMap<>();
        while(i<str.length()){
            char ch=str.charAt(i);
