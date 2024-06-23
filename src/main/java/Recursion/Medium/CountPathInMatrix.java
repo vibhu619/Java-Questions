@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Medium;
 //count total paths in n*m matrix to reach from 0,0 to n,m such that u can move only right or down
 public class CountPathInMatrix {
     public static void main(String[] args) {

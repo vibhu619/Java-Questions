@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Medium;
 
 public class FirstAndLastOccurence {
     static int first=-1;
@@ -6,7 +6,7 @@ public class FirstAndLastOccurence {
 
 
     public static void main(String[] args) {
-        String str="bvaacaavsasaddf";
+        String str="a";
         occ(str,0,'a');
     }
 
@@ -24,9 +24,9 @@ public class FirstAndLastOccurence {
             if(first==-1){
                 first=index;
             }
-            else {
-                last=index;
-            }
+            //always update last if you got the element
+            last=index;
+
         }
 
         //call recursively for next index

@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Medium;
 //you have a n*m floor , u need to tell in how many ways u can fill floor with 1*m size of tile.
 public class TilesPlacement {
     public static void main(String[] args) {

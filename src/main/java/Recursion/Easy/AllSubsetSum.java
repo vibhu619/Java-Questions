@@ -25,9 +25,11 @@ public class AllSubsetSum {
             return;
 
         }
+        //take that element
         res.add(arr[index]);
         subsetSum(arr,index+1,res);
 
+        //dont take
         res.remove(res.get(res.size()-1));
         subsetSum(arr,index+1,res);
     }

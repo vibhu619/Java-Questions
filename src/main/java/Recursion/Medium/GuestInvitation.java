@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Medium;
 //no of ways to call n guest aas single or in pair
 public class GuestInvitation {
     public static void main(String[] args) {

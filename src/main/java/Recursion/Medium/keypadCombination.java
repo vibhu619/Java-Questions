@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Medium;
 
 public class keypadCombination {
     public static String[] keypad={".","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};

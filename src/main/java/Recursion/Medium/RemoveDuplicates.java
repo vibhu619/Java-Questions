@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Medium;
 
 public class RemoveDuplicates {
     public static boolean[] arr=new boolean[26];
@@ -12,7 +12,7 @@ public class RemoveDuplicates {
     //Logic
     //we have created an array of length 26 which has false value in all index initially.
     //To get index of alphabet just do- char - 'a'  For ex- 'b' -'a'=1 , 'c'-'a'=2......... 'z'-'a'=26
-    //We can keep track of each element and see if this element has value true in array than it has already co me , if not, than its first time coming
+    //We can keep track of each element and see if this element has value true in array than it has already come , if not, than its first time coming
     private static void removeDup(String str, int index, String newString) {
         if(index==str.length()){
             System.out.println(newString);

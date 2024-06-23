@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Medium;
 
 public class AllStringSubsequences {
     public static void main(String[] args) {

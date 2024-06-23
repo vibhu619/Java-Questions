@@ -2,6 +2,7 @@ package Recursion.Easy;
 
 public class RecursiveSequence {
     public static void main(String[] args) {
+
         System.out.println(lastNon0Digit(84));
     }
 

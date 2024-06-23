@@ -14,7 +14,11 @@ public class SpaceString {
             return;
         }
             char curr=str.charAt(index);
+
+            //without space
             space(str,index+1,newString+curr);
+
+            //with space
             space(str,index+1,newString+" "+curr);
     }
 }
