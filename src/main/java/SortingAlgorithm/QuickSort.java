@@ -17,7 +17,7 @@ public class QuickSort {
 
     private static void quickSort(int[] arr, int low, int high, int n) {
         //do sorting till u get only one element
-        if(low<high){
+            if(low<high){
             int pivot=partiton(arr,low,high,n);  //find pivot index
 
             quickSort(arr,low,pivot-1,n);  //sort left part of pivot

@@ -21,7 +21,7 @@ public class EvenLengthPalindromeString {
 
     private static boolean evenPalindromeString(String str) {
         for(int i=0;i<str.length();i++){
-            for(int len=2;i+len<=str.length();len+=2){
+            for(int len=2 ;i+len<=str.length();len+=2){
                 return isPalindrome(str.substring(i,i+len));
             }
         }

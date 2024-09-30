@@ -6,15 +6,15 @@ import java.util.ArrayList;
 // If no such element is found, return list containing [-1].
 public class RemoveDuplicates {
     public static void main(String[] args) {
-        int[] arr={2 ,0 ,3 ,3 ,1};
+        int[] arr={2 ,0 ,3 ,3 ,2,1};
         int n=arr.length;
         ArrayList<Integer> duplicates=new ArrayList<>();
 
         //iterate all the elements in array and go to the index which is the value of that element
         //then add n at that index
         for(int i=0;i<n;i++){
-            int index=arr[i]%n;
-            arr[index]+=n;
+            int correctIndex=arr[i]%n;  //Iterate through the array and for each element A[i], increment the value at index A[i] % N by N. This way, the remainder ensures we access the correct index even after modifying the value.
+            arr[correctIndex]+=n;
         }
 
         //if u have added n at any particular index twice or more that means that index was there twice or more than twice in that array

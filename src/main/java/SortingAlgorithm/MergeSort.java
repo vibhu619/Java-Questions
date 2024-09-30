@@ -75,7 +75,7 @@ public class MergeSort {
 
         int i=0;  //track the left subarray
         int j=0;  //track the right subarray
-        int k=s; //track the merged array(which is original array) as we are again taking data back to original array arr
+        int k=s; //track the merged array(which is original array) as we are again taking data back to original array arr  ****IMP****
 
         //Copy data from L and R till both n1 and n2 are not exhausted
         while(i<n1 && j<n2){

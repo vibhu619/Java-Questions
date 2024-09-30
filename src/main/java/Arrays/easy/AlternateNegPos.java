@@ -3,6 +3,8 @@ package Arrays.easy;
 import java.util.ArrayList;
 //Given an unsorted array Arr of N positive and negative numbers. Your task is to create an array of alternate
 // positive and negative numbers without changing the relative order of positive and negative numbers.
+
+//This is two array use with Tc- O(N) and SC- O(N)
 public class AlternateNegPos {
     public static void main(String[] args) {
         int[] arr={-15 ,30, 43, -18, -38, 38, 36, 78, -22, -68 ,16, 39, -41, -15, 98, 69, -72, -32};

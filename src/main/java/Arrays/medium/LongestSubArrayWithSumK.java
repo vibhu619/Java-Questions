@@ -32,7 +32,7 @@ public class LongestSubArrayWithSumK {
 
 
     //if we have only positive numbers we could have used sliding window technique
-    //but we have negative number too hence we used hashmap to calculate and store prefix sub array sum
+    //but we have negative number too hence we used hashmap to calculate and  prefix sub array sum technique
     public static int lenOfLongSubarr (int arr[], int N, int K) {
         //Complete the function
         int sum=0;

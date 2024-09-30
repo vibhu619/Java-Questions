@@ -1,44 +1,30 @@
 package Arrays.easy;
-//Cant use prefix subarray technique as example includes only Non neg integer--use sliding window
+//Print minimum size of sub array which has sum equals to given sum
+//Cant use prefix sub array technique as example includes only Non neg integer--use sliding window
 public class SubarrayWithGivenSum {
     public static void main(String[] args) {
 
 
-        int[] arr = {1,2,3,4,5,6,7,8,9,10};
+        int[] arr = {1,1,2,3,4,5,6,7,8,9,10};
         int n = arr.length;
-        int k = 15;
+        int k = 11;
         int sum=0;
-        int size=0;
-        int f=0;
-        int l=0;
-        for (int i = 0; i < n; i++) {
-
-            if(sum+arr[i]<k){
-                sum=sum+arr[i];
-                size++;
+        int j=0;
+        int mINSize=Integer.MAX_VALUE;
+        for(int i=0;i<n;i++){
+            sum=sum+arr[i];
+            while(sum>k){
+                sum=sum-arr[j];
+                j++;
             }
-            else if(sum+arr[i]==k){
-                f=0;
-                l=i;
-                break;
-            }
-            else
-                break;
-        }
-        int window_sum=sum;
-        for(int i=size;i<n;i++){
-            window_sum+=arr[i]-arr[i-size];
-            if(window_sum==k){
-                f=i-size+1;
-                l=i;
+            if(sum==k){
+                int ans=i-j+1;
+                mINSize=Math.min(mINSize,ans);
 
             }
         }
 
-        System.out.println(f + " " + l);
-        int s=l-f+1;
-        System.out.println("Subarray of size with sum " + k + ": " + s );
-
+        System.out.println("Subarray of size with sum " + mINSize );
 
     }
 }

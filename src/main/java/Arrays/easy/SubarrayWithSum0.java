@@ -2,6 +2,7 @@ package Arrays.easy;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 //Given an array of positive and negative numbers. Find if there is a subarray (of size at-least one) with 0 sum
 
@@ -32,7 +33,5 @@ public class SubarrayWithSum0 {
             System.out.println("Yes");
         else
             System.out.println("No");
-
-
     }
 }

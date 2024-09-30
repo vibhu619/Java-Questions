@@ -3,6 +3,8 @@ package Arrays.medium;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import static java.util.Collections.replaceAll;
+
 //Given an array of strings arr[] of length n representing non-negative integers, arrange them in a manner, such that, after concatenating them in order,
 //        it results in the largest possible number. Since the result may be very large, return it as a string.
 //
@@ -13,7 +15,7 @@ import java.util.Comparator;
 //        Explanation: Given numbers are  {"3", "30", "34", "5", "9"}, the arrangement "9534330" gives the largest value.
 public class LargestNumberFormed {
     public static void main(String[] args) {
-        String[] arr={"3", "30", "34", "5", "9"};
+        String[] arr={"0","0","10"};
         System.out.println(printLargest(arr.length,arr));
     }
 
@@ -31,11 +33,13 @@ public class LargestNumberFormed {
             }
 
         });
-
-        StringBuilder ans= new StringBuilder();
+        String ans= "";
         for(String x: arr){
-            ans.append(x);
+            ans=ans+x;
         }
-        return ans.toString();
+        if (ans.matches("0+")) {
+            ans = "0";
+        }
+        return ans;
     }
 }

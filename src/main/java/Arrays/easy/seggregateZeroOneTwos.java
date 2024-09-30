@@ -6,9 +6,10 @@ public class seggregateZeroOneTwos {
 
         int[] arr = {1, 0, 2, 0, 2, 1, 0, 2, 1};
         int n = arr.length;
-        int i=0;
-        int l=0;
-        int r=n-1;
+        int i=0;  //used for iteration
+        int l=0;  //keep track for 0's
+        int r=n-1; //keep track for 2's
+        //note- 1 will automatically manage
         while (i <=r) {
             if(arr[i]==0){
                 //if 0 swap arr[i] and arr[l] & increment i and l

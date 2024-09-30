@@ -1,8 +1,6 @@
 package Arrays.medium;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 //Given an array arr[] of size n, find the first repeating element.
 // The element should occur more than once and the index of its first occurrence should be the smallest.
 
@@ -12,6 +10,7 @@ import java.util.Map;
   Output: 2*/
 
 import static java.lang.Integer.MAX_VALUE;
+import static java.lang.Integer.min;
 
 public class FirstRepeatingNumber {
     public static void main(String[] args) {
@@ -20,22 +19,21 @@ public class FirstRepeatingNumber {
         Map<Integer,Integer> m=new HashMap<>();
 
         int potentialAns=-1;
-        for(int i=0;i<n;i++){
+        for(int i = 0; i< n; i++){
             if(m.containsKey(arr[i])){
                     potentialAns = arr[i];
                     break;
-
             }
             else{
                 m.put(arr[i],i);
             }
         }
+        System.out.println("Answer from hashmap");
         if(potentialAns==-1){
             System.out.println("No repeating number");
         }
         else {
             System.out.println(potentialAns);
         }
-
     }
 }

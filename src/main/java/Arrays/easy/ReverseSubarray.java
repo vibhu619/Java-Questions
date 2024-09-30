@@ -13,7 +13,7 @@ public class ReverseSubarray {
         Scanner scanner = new Scanner(System.in);
         int l = scanner.nextInt();  //1 based indexing
         int r = scanner.nextInt(); //1 based indexing
-         int l1=l-1;
+        int l1=l-1;
         int r1=r-1;
         while(l1<r1){
             //swap arr[l] and arr[r]
@@ -24,6 +24,7 @@ public class ReverseSubarray {
             l1++;
             r1--;
         }
+
 
         for (int x: arr
              ) {

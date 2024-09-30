@@ -39,7 +39,7 @@ public class SecondRepeatedString {
             }
         }
 
-        if(map.size()==0){   //corner case when only one element
+        if(map.isEmpty()){   //corner case when only one element
             System.out.println("");}
         else
             System.out.println(max);

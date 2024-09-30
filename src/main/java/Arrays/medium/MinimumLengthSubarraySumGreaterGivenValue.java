@@ -16,11 +16,16 @@ public class MinimumLengthSubarraySumGreaterGivenValue {
             System.out.println(1);;
         }
         for(int i=0;i<n;i++){
+            //simply add each element one by one
+            //if adding element doesnt make cs > x then add it to cs
             if(arr[i]+cs<x){
                 cs=cs+arr[i];
             }
+            //else
             else{
-                cs=cs+arr[i];
+                cs=cs+arr[i]; //add it to cs to make cs>x
+                //then store potential ans as cs>x
+                //and remove the elements from start to check if another subarray exist with minimum length
                 while(i<n && cs>x){
                     minL=Math.min(minL,i-start+1);
                     cs=cs-arr[start];

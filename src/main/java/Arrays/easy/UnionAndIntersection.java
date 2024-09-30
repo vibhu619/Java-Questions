@@ -71,7 +71,6 @@ public class UnionAndIntersection {
             } else if (a[i] < b[j]) {
                 i++;
             } else if (a[i] > b[j]) {
-
                 j++;
             }
         }
@@ -82,7 +81,5 @@ public class UnionAndIntersection {
                 System.out.println(x+ ",");
 
             }
-
-
     }
 }
